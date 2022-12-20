@@ -1,0 +1,8 @@
+npm install --save sequelize mysql2
+
+DB_NAME=minuteMadico
+DB_USERNAME=root
+DB_PASSWORD=
+DB_HOST=localhost
+
+
