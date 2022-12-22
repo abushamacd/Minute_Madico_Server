@@ -1,0 +1,60 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add bcryptjs
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.12.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect ENETUNREACH 104.16.25.35:443 - Local (0.0.0.0:0)
+      at internalConnect (node:net:1053:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)
+      at emitLookup (node:net:1209:9)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:103587:28
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:103496:13
+      at module.exports.RawTask.call (/usr/local/lib/node_modules/yarn/lib/cli.js:79584:19)
+      at flush (/usr/local/lib/node_modules/yarn/lib/cli.js:79666:29)
+      at processTicksAndRejections (node:internal/process/task_queues:77:11)
+      at runNextTicks (node:internal/process/task_queues:64:3)
+      at process.processImmediate (node:internal/timers:442:9)
+
+npm manifest: 
+  {
+    "name": "minute_madico_server",
+    "version": "1.0.0",
+    "description": "doctor_appoinment_system",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server",
+      "dev": "nodemon server"
+    },
+    "author": "Abu Shama",
+    "license": "MIT",
+    "dependencies": {
+      "body-parser": "^1.20.1",
+      "colors": "^1.4.0",
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.3",
+      "express": "^4.18.2",
+      "mysql2": "^2.3.3",
+      "nodemon": "^2.0.20",
+      "sequelize": "^6.28.0"
+    },
+    "devDependencies": {
+      "sequelize-cli": "^6.5.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

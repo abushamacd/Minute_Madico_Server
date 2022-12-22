@@ -1,6 +1,8 @@
 npm install --save sequelize mysql2
 npm install --save-dev sequelize-cli
 npx sequelize-cli init
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+npx sequelize-cli db:migrate
 
 DB_NAME=minuteMadico
 DB_USERNAME=root

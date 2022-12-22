@@ -28,18 +28,24 @@ exports.saveUser = async (req, res, next) => {
   try {
     // Save
     const reqData = req.body;
-    console.log(reqData);
     const result = await saveUserService(reqData);
-
-    res.status(200).json({
-      success: true,
-      message: `Data inserted successfully`,
-      data: result,
-    });
+    if (result === false) {
+      res.status(200).json({
+        success: false,
+        message: `This email "${reqData.email}" already exist.`,
+        data: result,
+      });
+    } else {
+      res.status(200).json({
+        success: true,
+        message: `Registration successfully`,
+        data: result,
+      });
+    }
   } catch (error) {
     res.status(400).json({
       success: false,
-      message: `Data inserted failed`,
+      message: `Registration failed`,
       error: error.message,
     });
   }
