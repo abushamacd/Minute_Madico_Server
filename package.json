@@ -10,6 +10,7 @@
   "author": "Abu Shama",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.20.1",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
@@ -17,5 +18,8 @@
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.20",
     "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.5.2"
   }
 }

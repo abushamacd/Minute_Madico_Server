@@ -1,4 +1,6 @@
 npm install --save sequelize mysql2
+npm install --save-dev sequelize-cli
+npx sequelize-cli init
 
 DB_NAME=minuteMadico
 DB_USERNAME=root

@@ -1,19 +1,24 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-// const dataRoute = require("./routes/data.route");
+const userRoute = require("./routes/user.routes");
+var bodyParser = require("body-parser");
 
 // Middleware
 app.use(express.json());
 app.use(cors());
+
+// Body Parser configuration
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Testing API
 app.get("/", (req, res) => {
   res.send(`==== Your app is running successfully ====`);
 });
 
-// Data Route
-// app.use("/api/v1/data", dataRoute);
+// User Route
+app.use("/api/v1/user", userRoute);
 
 // Unknown API Handle
 app.all("*", (req, res) => {
